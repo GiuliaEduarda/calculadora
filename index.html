@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container{
+            width: 23vw;
+        background-color: #D996C1;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 3px 3px 2px;
+        
+        }
+        .btn{
+           margin: 2px;
+           box-shadow: 2px 2px 2px;
+        }
+       
+        
+        .form-control{
+            box-shadow: 2px 2px 2px;
+            text-align: end;
+        }
+
+        @media (max-width: 576px) {
+            .container{
+            width:85vw;
+           
+        }
+        }
+        @media ( min-width: 577px) and ( max-width: 1200px) {
+            .container{
+            width:50vw;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+    <div class="container  "   >
+        <div class=" justify-content-center "  >
+            <div class="p-4 ">
+                <div class="mb-3 calculadora">
+                    <input id="resultado" class="form-control form-control-lg resultado " placeholder="0" type="text" disabled="disabled">
+                </div>
+                <div class="row">
+                    <button onclick="calcular('acao', 'c')" class="btn btn-lg btn-dark  clear col-6">C</button>
+                    <button  onclick="calcular('acao', '/')" class="btn btn-lg btn-dark col">/</button>
+                    <button  onclick="calcular('acao', '*')" class="btn btn-lg btn-dark col">X</button>
+                </div>
+                <div class="row">
+                    <button onclick="calcular('valor', 7)" class="btn btn-lg btn-dark col">7</button>
+                    <button onclick="calcular('valor', 8)" class="btn btn-lg btn-dark col">8</button>
+                    <button onclick="calcular('valor', 9)" class="btn btn-lg btn-dark col">9</button>
+                    <button onclick="calcular('acao', '-')" class="btn btn-lg btn-dark col">-</button>
+                </div>
+                <div class="row">
+                    <button onclick="calcular('valor', 4)" class="btn btn-lg btn-dark col">4</button>
+                    <button onclick="calcular('valor', 5)" class="btn btn-lg btn-dark col">5</button>
+                    <button onclick="calcular('valor', 6)" class="btn btn-lg btn-dark col">6</button>
+                    <button onclick="calcular('acao', '+')"  class="btn btn-lg btn-dark col">+</button>
+                </div>
+
+                <div class="row">
+                    <div class="row col-10 ">
+                        <button onclick="calcular('valor', 1)" class="btn btn-lg btn-dark col">1</button>
+                        <button onclick="calcular('valor', 2)" class="btn btn-lg btn-dark col">2</button>
+                        <button onclick="calcular('valor', 3)" class="btn btn-lg btn-dark col">3</button>
+                        <br>
+                        <button onclick="calcular('valor', 0)" class="btn btn-lg btn-dark col-8">0</button>
+                        <button onclick="calcular('acao', '.')" class="btn btn-lg btn-dark col">.</button>
+                    </div>
+
+                    <button id="meio" onclick="calcular('acao', '=')" class="btn col-3 btn-dark enter " style="height: 100px; position: relative; right: -7px; ">=</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <script src="script.js"></script>
+    
+</body>
+</html>
